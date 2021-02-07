@@ -64,7 +64,7 @@ wmic /USER:{FAMILY}\{USER} /PASSWORD:{PASSWORD} /NODE:"{NODE}" /OUTPUT:"{DIRECTO
 ```
 |	|Node	|DeviceID	|FreeSpace|	Size|
 |:---|:---|:---|:------|:---|
-|0	|v01	|C:|	00.23128128|	149.9003868|
+|0	|v01	|C:|	100.23128128|	149.9003868|
 |1	|v02	|C:|	86.11068726|	149.9003868|
 |2	|v03	|C:|	71.60224915|	149.9003868| 
   
