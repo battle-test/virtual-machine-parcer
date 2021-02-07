@@ -55,7 +55,7 @@ wmic /USER:{FAMILY}\{USER} /PASSWORD:{PASSWORD} /NODE:"{NODE}" /OUTPUT:"{DIRECTO
 |.|.|.|.|.|.|.|  
   
  В столбце "InstallLocation" редко содержаться информация об установочной папке. 
-___
+
 ***Команда*** "wmic logicaldisk where drivetype=3 get freespace,deviceid,size" возвращает текущие состояние локальных дисков.
 ```cmd
 wmic /USER:{FAMILY}\{USER} /PASSWORD:{PASSWORD} /NODE:"{NODE}" /OUTPUT:"{DIRECTORY}{NODE}_logicaldisk.csv" logicaldisk where drivetype=3 get freespace,deviceid,size /FORMAT:CSV
@@ -68,7 +68,7 @@ wmic /USER:{FAMILY}\{USER} /PASSWORD:{PASSWORD} /NODE:"{NODE}" /OUTPUT:"{DIRECTO
   
   
  FreeSpace,Size указывают значение в гигабайтах.
-___
+
 ***Команда*** "systeminfo" возвращает полные сведения о главных компонентах системы. От железа до операционной системы. 
 ```cmd
 systeminfo /S {NODE} /U {FAMILY}\{USER} /P {PASSWORD} /fo csv > {DIRECTORY}{NODE}_systeminfo.csv
@@ -81,7 +81,7 @@ systeminfo /S {NODE} /U {FAMILY}\{USER} /P {PASSWORD} /fo csv > {DIRECTORY}{NODE
 
  Столбцы с параметрами сети и виртулиации в текущей таблице не демонстрируется т.к 
 длинные и сильно вытягивают в высоту таблицу. 
-___
+
 Команда [WMIC](https://ab57.ru/cmdlist/wmic.html) (Windows Management Instrumentation Command) 
 используется для получения сведений об оборудовании и системе, управления процессами и их компонентами.
 
@@ -89,7 +89,6 @@ ___
 
 Ключевые слова: {FAMILY},{USER}, {PASSWORD} ,{NODE}, {DIRECTORY}. 
 Переменные к ним: directory, nodes, family, user, password. 
-___
 ### Сортировка и слияние.
 ***Вызов*** сортирующий ***функции*** полученных файлов по каталогам: logicaldisk, product, systeminfo
 ```Python
