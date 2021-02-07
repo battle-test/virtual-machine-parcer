@@ -40,7 +40,6 @@ ___
 chcp 65001
 ```
 ___
-#### Следующие запросы сохраняют файлы в формате *.csv
 -Команда: "wmic product get name,version,description,installdate,installlocation" 
 возвращает установленные программы.
 
