@@ -31,16 +31,16 @@ ___
 На основе данного шаблона программа иницилизирует [cmd](https://ab57.ru/cmdlist.html) скрипты 
 подставляя в ключевые слова переменные: directory, nodes, family, user, password.
 ### Команды:
--Служебная команда, отключает выводы служебной информации .
+**Команда**, отключает выводы служебной информации .
 ```cmd
 @echo 
 ```
--Инициализирует выводы в кодировке utf-8
+**Команда** инициализирует выводы в кодировке utf-8
 ```cmd
 chcp 65001
 ```
 ___
--Команда: "wmic product get name,version,description,installdate,installlocation" 
+**Команда**: "wmic product get name,version,description,installdate,installlocation" 
 возвращает установленные программы.
 
 ```cmd
@@ -56,7 +56,7 @@ wmic /USER:{FAMILY}\{USER} /PASSWORD:{PASSWORD} /NODE:"{NODE}" /OUTPUT:"{DIRECTO
   
  В столбце "InstallLocation" редко содержаться информация об установочной папке. 
 
--Команда "wmic logicaldisk where drivetype=3 get freespace,deviceid,size" возвращает текущие состояние локальных дисков.
+**Команда** "wmic logicaldisk where drivetype=3 get freespace,deviceid,size" возвращает текущие состояние локальных дисков.
 ```cmd
 wmic /USER:{FAMILY}\{USER} /PASSWORD:{PASSWORD} /NODE:"{NODE}" /OUTPUT:"{DIRECTORY}{NODE}_logicaldisk.csv" logicaldisk where drivetype=3 get freespace,deviceid,size /FORMAT:CSV
 ```
@@ -69,7 +69,7 @@ wmic /USER:{FAMILY}\{USER} /PASSWORD:{PASSWORD} /NODE:"{NODE}" /OUTPUT:"{DIRECTO
   
  FreeSpace,Size указывают значение в гигабайтах.
 
--Команда "systeminfo" возвращает полные сведения о главных компонентах системы. От железа до операционной системы. 
+**Команда** "systeminfo" возвращает полные сведения о главных компонентах системы, от железа до операционной системы. 
 ```cmd
 systeminfo /S {NODE} /U {FAMILY}\{USER} /P {PASSWORD} /fo csv > {DIRECTORY}{NODE}_systeminfo.csv
 ```
